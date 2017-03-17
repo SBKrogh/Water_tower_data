@@ -1,0 +1,12 @@
+1) Go to git repository folder in termianl >> cd ...git_repo...
+
+2) Git pull 
+
+3) git add -A
+
+4) git commit -m "Message/Text"
+
+5) git push 
+
+6) type in username and password to your git account.
+
