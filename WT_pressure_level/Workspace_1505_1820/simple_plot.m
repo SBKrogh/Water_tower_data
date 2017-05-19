@@ -21,3 +21,9 @@ title('Differential pressure over pumps - steady state')
 %legend('Reference C2','Reference C16','Reference C18','Reference C25')
 xlabel('Time [s]')
 ylabel('Differential pressure [Bar]')
+
+p_c2 = mean(data_pump.pump_pressure(2,20000:length(data_pump.pump_pressure)))
+p_c16 = mean(data_pump.pump_pressure(3,20000:length(data_pump.pump_pressure)))
+p_c18 = mean(data_pump.pump_pressure(4,20000:length(data_pump.pump_pressure)))
+p_c25 = mean(data_pump.pump_pressure(5,20000:length(data_pump.pump_pressure)))
+
