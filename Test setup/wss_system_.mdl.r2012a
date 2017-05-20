@@ -28,7 +28,7 @@ Model {
   LastModifiedBy	  "pppc"
   ModifiedDateFormat	  "%<Auto>"
   LastModifiedDate	  "Sat May 20 13:55:11 2017"
-  RTWModifiedTimeStamp	  417211220
+  RTWModifiedTimeStamp	  417189062
   ModelVersionFormat	  "1.%<AutoIncrement:495>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
@@ -611,7 +611,7 @@ Model {
 	      CustomProperty {
 		DataType		"int32"
 		Name			"ExtModeStaticAllocSize"
-		Value			1000000
+		Value			4000000
 	      }
 	      CustomProperty {
 		DataType		"slbool"
@@ -626,8 +626,8 @@ Model {
       }
       Name		      "Configuration"
       ExtraOptions	      "-aGenerateTraceInfo=0 -aIgnoreTestpoints=0 "
-      CurrentDlgPage	      "Data Import//Export"
-      ConfigPrmDlgPosition     [ 82, 24, 1132, 1138 ] 
+      CurrentDlgPage	      "Code Generation/LNXXX code generation options"
+      ConfigPrmDlgPosition     [ 83, 48, 1131, 1137 ] 
     }
     PropName		    "ConfigurationSets"
   }
@@ -845,7 +845,7 @@ Model {
     ShowPageBoundaries	    off
     ZoomFactor		    "100"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    "1006"
+    SIDHighWatermark	    "988"
     Block {
       BlockType		      Constant
       Name		      "Constant1"
@@ -853,6 +853,14 @@ Model {
       Position		      [595, 180, 625, 210]
       ZOrder		      -5
       Value		      "0"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Constant10"
+      SID		      "962"
+      Position		      [170, 580, 200, 610]
+      ZOrder		      -5
+      Value		      "0.7"
     }
     Block {
       BlockType		      Constant
@@ -887,14 +895,6 @@ Model {
     }
     Block {
       BlockType		      Constant
-      Name		      "Constant2"
-      SID		      "997"
-      Position		      [360, 220, 390, 250]
-      ZOrder		      -5
-      Value		      "0.2"
-    }
-    Block {
-      BlockType		      Constant
       Name		      "Constant3"
       SID		      "975"
       Position		      [360, 270, 390, 300]
@@ -912,8 +912,8 @@ Model {
     Block {
       BlockType		      Constant
       Name		      "Constant5"
-      SID		      "1005"
-      Position		      [250, 480, 280, 510]
+      SID		      "980"
+      Position		      [200, 430, 230, 460]
       ZOrder		      -5
       Value		      "0.7"
     }
@@ -924,6 +924,14 @@ Model {
       Position		      [410, 380, 440, 410]
       ZOrder		      -5
       Value		      "0"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Constant7"
+      SID		      "960"
+      Position		      [250, 480, 280, 510]
+      ZOrder		      -5
+      Value		      "0.7"
     }
     Block {
       BlockType		      Constant
@@ -1936,33 +1944,18 @@ Model {
     }
     Block {
       BlockType		      Reference
-      Name		      "Timer6"
-      SID		      "998"
+      Name		      "Timer5"
+      SID		      "987"
       Ports		      [0, 1]
-      Position		      [180, 207, 220, 243]
+      Position		      [355, 217, 395, 253]
       ZOrder		      -14
       LibraryVersion	      "1.648"
       FontName		      "Verdana"
       FontSize		      11
       SourceBlock	      "powerlib_extras/Control \nBlocks/Timer"
       SourceType	      "Timer"
-      t			      "[0 1800 3600]"
-      e			      "[0.2 0.18 0.2] "
-    }
-    Block {
-      BlockType		      Reference
-      Name		      "Timer7"
-      SID		      "1004"
-      Ports		      [0, 1]
-      Position		      [160, 577, 200, 613]
-      ZOrder		      -14
-      LibraryVersion	      "1.648"
-      FontName		      "Verdana"
-      FontSize		      11
-      SourceBlock	      "powerlib_extras/Control \nBlocks/Timer"
-      SourceType	      "Timer"
-      t			      "[0 1800 3600 5400 7200]"
-      e			      "[0.7 0.81 0.7 0.57 0.7] "
+      t			      "[0 1800 3600 12600 14400]"
+      e			      "[0.2 0.213 0.2 0.18 0.2] "
     }
     Block {
       BlockType		      ToFile
@@ -2141,8 +2134,8 @@ Model {
       ShowLegends	      on
       LegendLocations	      "0.89182     0.87144    0.080203    0.043764"
       TimeRange		      "500"
-      YMin		      "0.12"
-      YMax		      "0.14"
+      YMin		      "0.124"
+      YMax		      "0.1245"
       SaveName		      "Outputs4"
       DataFormat	      "StructureWithTime"
       LimitDataPoints	      off
@@ -4887,8 +4880,8 @@ Model {
       ShowLegends	      on
       LegendLocations	      "0.87774     0.77106    0.094288     0.14633"
       TimeRange		      "500"
-      YMin		      "0.198"
-      YMax		      "0.22"
+      YMin		      "-0.025"
+      YMax		      "0.275"
       SaveName		      "Outputs5"
       DataFormat	      "StructureWithTime"
       LimitDataPoints	      off
@@ -4923,8 +4916,8 @@ Model {
       }
       ShowLegends	      on
       TimeRange		      "500"
-      YMin		      "0.675"
-      YMax		      "0.85"
+      YMin		      "0.699"
+      YMax		      "0.72"
       SaveName		      "Outputs3"
       DataFormat	      "StructureWithTime"
       LimitDataPoints	      off
@@ -5547,7 +5540,7 @@ Model {
       }
     }
     Line {
-      SrcBlock		      "Constant5"
+      SrcBlock		      "Constant7"
       SrcPort		      1
       Points		      [65, 0]
       Branch {
@@ -5575,7 +5568,7 @@ Model {
       }
     }
     Line {
-      SrcBlock		      "Timer7"
+      SrcBlock		      "Constant10"
       SrcPort		      1
       Points		      [45, 0]
       Branch {
@@ -5707,9 +5700,9 @@ Model {
       }
     }
     Line {
-      SrcBlock		      "Constant2"
+      SrcBlock		      "Timer5"
       SrcPort		      1
-      Points		      [20, 0]
+      Points		      [15, 0]
       Branch {
 	DstBlock		"Ctrl PRZ1"
 	DstPort			1
